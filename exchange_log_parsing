@@ -1,0 +1,151 @@
+from requests import get
+import os, glob
+import os.path
+import re
+
+
+def fileList(targetDir, condition):
+    files = os.listdir(targetDir)
+    resultFile = open("./P_result2.txt",'w')
+    tartgetFiles = glob.glob(condition)
+    p = '([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})'
+    for i in tartgetFiles :
+        f = open(i,'r')
+        print(i)
+        for line in f.readlines():
+            if line.find('@edu.edu') > 0:
+                try:
+                    regex = re.compile(p)
+                    mc = regex.findall(line)
+                    resultFile.write("@edu.edu|"+mc[0][0]+"."+mc[0][1]+"."+mc[0][2]+"."+mc[0][3]+"|"+mc[1][0]+"."+mc[1][1]+"."+mc[1][2]+"."+mc[1][3]+"|"+line)
+                except:
+                    pass
+            elif line.find('@foo.com') > 0:
+                try:
+                    regex = re.compile(p)
+                    mc = regex.findall(line)
+                    resultFile.write("@foo.com|"+mc[0][0]+"."+mc[0][1]+"."+mc[0][2]+"."+mc[0][3]+"|"+mc[1][0]+"."+mc[1][1]+"."+mc[1][2]+"."+mc[1][3]+"|"+line)
+                except:
+                    pass
+            elif line.find('@1337.com') > 0:
+                try:
+                    regex = re.compile(p)
+                    mc = regex.findall(line)
+                    resultFile.write("@1337.com'|"+mc[0][0]+"."+mc[0][1]+"."+mc[0][2]+"."+mc[0][3]+"|"+mc[1][0]+"."+mc[1][1]+"."+mc[1][2]+"."+mc[1][3]+"|"+line)
+                except:
+                    pass
+            elif line.find('@test.com') > 0:
+                try:
+                    regex = re.compile(p)
+                    mc = regex.findall(line)
+                    resultFile.write("@test.com|"+mc[0][0]+"."+mc[0][1]+"."+mc[0][2]+"."+mc[0][3]+"|"+mc[1][0]+"."+mc[1][1]+"."+mc[1][2]+"."+mc[1][3]+"|"+line)
+                except:
+                    pass
+            elif line.find('@evil.corp') > 0:
+                try:
+                    regex = re.compile(p)
+                    mc = regex.findall(line)
+                    resultFile.write("@evil.corp|"+mc[0][0]+"."+mc[0][1]+"."+mc[0][2]+"."+mc[0][3]+"|"+mc[1][0]+"."+mc[1][1]+"."+mc[1][2]+"."+mc[1][3]+"|"+line)
+                except:
+                    pass
+            elif line.find('@akliol.edu') > 0:
+                try:
+                    regex = re.compile(p)
+                    mc = regex.findall(line)
+                    resultFile.write("@akliol.edu|"+mc[0][0]+"."+mc[0][1]+"."+mc[0][2]+"."+mc[0][3]+"|"+mc[1][0]+"."+mc[1][1]+"."+mc[1][2]+"."+mc[1][3]+"|"+line)
+                except:
+                    pass
+            elif line.find('@abc.com') > 0:
+                try:
+                    regex = re.compile(p)
+                    mc = regex.findall(line)
+                    resultFile.write("@abc.com|"+mc[0][0]+"."+mc[0][1]+"."+mc[0][2]+"."+mc[0][3]+"|"+mc[1][0]+"."+mc[1][1]+"."+mc[1][2]+"."+mc[1][3]+"|"+line)
+                except:
+                    pass
+            elif line.find('@bofisa1.com') > 0:
+                try:
+                    regex = re.compile(p)
+                    mc = regex.findall(line)
+                    resultFile.write("@bofisa1.com|"+mc[0][0]+"."+mc[0][1]+"."+mc[0][2]+"."+mc[0][3]+"|"+mc[1][0]+"."+mc[1][1]+"."+mc[1][2]+"."+mc[1][3]+"|"+line)
+                except:
+                    pass
+            elif line.find('@360.com') > 0:
+                try:
+                    regex = re.compile(p)
+                    mc = regex.findall(line)
+                    resultFile.write("@360.com|"+mc[0][0]+"."+mc[0][1]+"."+mc[0][2]+"."+mc[0][3]+"|"+mc[1][0]+"."+mc[1][1]+"."+mc[1][2]+"."+mc[1][3]+"|"+line)
+                except:
+                    pass
+            elif line.find('@microsoft.corp') > 0:
+                try:
+                    regex = re.compile(p)
+                    mc = regex.findall(line)
+                    resultFile.write("@microsoft.corp|"+mc[0][0]+"."+mc[0][1]+"."+mc[0][2]+"."+mc[0][3]+"|"+mc[1][0]+"."+mc[1][1]+"."+mc[1][2]+"."+mc[1][3]+"|"+line)
+                except:
+                    pass
+            elif line.find('@tortilla.mx') > 0:
+                try:
+                    regex = re.compile(p)
+                    mc = regex.findall(line)
+                    resultFile.write("@tortilla.mx|"+mc[0][0]+"."+mc[0][1]+"."+mc[0][2]+"."+mc[0][3]+"|"+mc[1][0]+"."+mc[1][1]+"."+mc[1][2]+"."+mc[1][3]+"|"+line)
+                except:
+                    pass
+            elif line.find('@tortilla.gang') > 0:
+                try:
+                    regex = re.compile(p)
+                    mc = regex.findall(line)
+                    resultFile.write("@tortilla.gang|"+mc[0][0]+"."+mc[0][1]+"."+mc[0][2]+"."+mc[0][3]+"|"+mc[1][0]+"."+mc[1][1]+"."+mc[1][2]+"."+mc[1][3]+"|"+line)
+                except:
+                    pass
+            elif line.find('@ddjif.lln') > 0:
+                try:
+                    regex = re.compile(p)
+                    mc = regex.findall(line)
+                    resultFile.write("@ddjif.lln|"+mc[0][0]+"."+mc[0][1]+"."+mc[0][2]+"."+mc[0][3]+"|"+mc[1][0]+"."+mc[1][1]+"."+mc[1][2]+"."+mc[1][3]+"|"+line)
+                except:
+                    pass
+            elif line.find('@ktorn.ruq') > 0:
+                try:
+                    regex = re.compile(p)
+                    mc = regex.findall(line)
+                    resultFile.write("@ktorn.ruq|"+mc[0][0]+"."+mc[0][1]+"."+mc[0][2]+"."+mc[0][3]+"|"+mc[1][0]+"."+mc[1][1]+"."+mc[1][2]+"."+mc[1][3]+"|"+line)
+                except:
+                    pass
+            elif line.find('@mail.com') > 0:
+                try:
+                    regex = re.compile(p)
+                    mc = regex.findall(line)
+                    resultFile.write("@mail.com|"+mc[0][0]+"."+mc[0][1]+"."+mc[0][2]+"."+mc[0][3]+"|"+mc[1][0]+"."+mc[1][1]+"."+mc[1][2]+"."+mc[1][3]+"|"+line)
+                except:
+                    pass
+            else:
+                print(line)
+        f.close()
+    resultFile.close()
+        
+def attack_ip(targetDir, condition):
+    try:
+        targetip = open('./iplist.txt', 'r').read().split('\n')
+        files = os.listdir(targetDir)
+        tartgetFiles = glob.glob(condition)
+        resultFile = open("./P_result3.txt",'w')
+
+        for i in tartgetFiles :
+            print(i)
+            f = open(i,'r',encoding='UTF8')
+            for line in f.readlines():
+                for ip in targetip:
+                    if line.find(ip) > 0:
+                        resultFile.write(ip+"|"+line)               
+            f.close()
+        resultFile.close()
+    except:
+        pass
+           
+def RunControl(path):
+    os.system(path)
+
+
+if __name__ == '__main__':
+    fileList("./", "*.log")
+    print("프로그램 종료")
